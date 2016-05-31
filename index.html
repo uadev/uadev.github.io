@@ -14,6 +14,7 @@
     <style>
         h1.logo {
             font-size: 200px;
+            cursor: pointer;
         }
     </style>
   </head>
@@ -28,23 +29,29 @@
 
       </header>
       <section>
-          <h1 class="logo">~:)</h1>
+          <h1 class="logo" id="fun-logo" title="Refresh page">~:)</h1>
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-57538730-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+      <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+        try {
+          var pageTracker = _gat._getTracker("UA-57538730-1");
+        pageTracker._trackPageview();
+        } catch(err) {}
+      </script>
 
+    <script>
+        function doRefresh() {
+            window.location.href = window.location.href.split('?_')[0] + '?_' + Date.now()
+        }
+        document.getElementById('fun-logo').addEventListener('click', doRefresh);
+    </script>
   </body>
 </html>
