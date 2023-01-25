@@ -32,8 +32,8 @@
     <script type="text/javascript">
         function main() {
             document.querySelector('#result').innerHTML = 'Перетягніть на панель закладок</br>'
-            let street = document.querySelector('#street').value
-            let num = document.querySelector('#num').value
+            let street = document.querySelector('#street').value.trim()
+            let num = document.querySelector('#num').value.trim()
             if (!street || !num) {
                 document.querySelector('#result').innerHTML = 'Спочатку введіть адресу'
                 return
