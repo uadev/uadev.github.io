@@ -38,7 +38,7 @@
                 return
             }
             let bookmarkTemplate = `<a href="javascript:(() => {if (location.href != 'https://www.dtek-kem.com.ua/ua/shutdowns') {location.href='https://dtek-kem.com.ua/ua/shutdowns'}; $('#street').val('${street}').click(); setTimeout(() => $('#streetautocomplete-list div')[0].click(), 500); setTimeout(() => $('#house_num').val(${num}).click(), 1000); setTimeout(() => {$('#house_numautocomplete-list div')[0].click(); $('.span-error, .error-active').removeClass('span-error error-active')}, 2000)})()">${street}, ${num}</a>`
-            javascript:(() => {if (location.href != 'https://www.dtek-kem.com.ua/ua/shutdowns') {location.href='https://dtek-kem.com.ua/ua/shutdowns'}; $('#street').val('Коперніка').click(); setTimeout(() => $('#streetautocomplete-list div')[0].click(), 500); setTimeout(() => $('#house_num').val(3).click(), 1000); setTimeout(() => {$('#house_numautocomplete-list div')[0].click(); $('.span-error, .error-active').removeClass('span-error error-active')}, 2000)})()
+            // javascript:(() => {if (location.href != 'https://www.dtek-kem.com.ua/ua/shutdowns') {location.href='https://dtek-kem.com.ua/ua/shutdowns'}; $('#street').val('Коперніка').click(); setTimeout(() => $('#streetautocomplete-list div')[0].click(), 500); setTimeout(() => $('#house_num').val(3).click(), 1000); setTimeout(() => {$('#house_numautocomplete-list div')[0].click(); $('.span-error, .error-active').removeClass('span-error error-active')}, 2000)})()
             document.querySelector('#result').innerHTML += bookmarkTemplate
 
         }
